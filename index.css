@@ -84,19 +84,19 @@ nav ul li a:hover::after{
     font-size: 120px;
     line-height: 160px;
     margin-left: -10px;
-    color: transparent;
+    /* color: transparent;
     /* -webkit-text-stroke: 1px #fff; */
-    background: linear-gradient(#fff, #fff);
+    /*background: linear-gradient(#fff, #fff);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -1000px 0;
-    animation: back 5s linear infinite alternate;
+    animation: back 5s linear infinite alternate; */
 }
-@keyframes back{
+/* @keyframes back{
     100%{
         background-position: 0 0;
     }
-}
+} */
 .text-box h3{
     font-size: 40px;
     font-weight: 400;
