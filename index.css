@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(images/dark-living-room-theme.jpg);
+    background-size: cover;
+    background-position: center; */
+    position: relative;
+}
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px 30px;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+ }
+ #menu{
+    display: none;
+ }
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+.text-box{
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+    margin-left: 20px;
+}
+.text-box p{
+    font-size: 50px;
+    font-weight: 600;
+}
+.text-box h1{
+    font-size: 120px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    /* -webkit-text-stroke: 1px #fff; */
+    background: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -1000px 0;
+    animation: back 5s linear infinite alternate;
+}
+@keyframes back{
+    100%{
+        background-position: 0 0;
+    }
+}
+.text-box h3{
+    font-size: 40px;
+    font-weight: 400;
+}
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 3px;
+}
+.text-box a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+.text-box a:hover{
+    background: #fff;
+    color: black;
+    letter-spacing: 2px;
+}
+.text-box a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 6px;
+
+}
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+}
+.social-icons a i{
+    color: #fff;
+    font-size: 50px;
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+   
+
+}
+.social-icons a{
+    text-decoration: none;
+}
+@media only screen and (max-width: 800px){
+    .logo{
+        width: 110px;
+        border-radius: 10px 30px;
+    }
+    .text-box p{
+        font-size: 20px;
+    }
+    .text-box h1{
+        font-size: 50px;
+        line-height: 57px;
+    }
+    .text-box h3{
+        font-size: 20px;
+    }
+    .social-icons{
+        bottom: 40%;
+    }
+    .nav{
+        padding: 10px 0;
+    }
+    #menu-icon{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        /* display: flex;
+        flex-direction: column; */
+        background: brown;
+        text-align: center;
+        clip-path: circle(0% at 100% 1%);
+        transition: 0.6s;
+    }
+    .navbar a{
+        display: block;
+        margin: 1rem;
+        padding: 20px;
+        color: #fff;
+    }
+    .navbar a:hover{
+        background: rgb(190, 47, 47);
+        color: #fff;
+        transition: 0.2s;
+    }
+    #menu:checked ~ .navbar{
+        clip-path: circle(144% at 100% 1%);
+    }
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
